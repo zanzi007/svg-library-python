@@ -43,6 +43,7 @@ class SVG(object):
         templates["rectangle"] = "    <rect fill='{}' stroke='{}' stroke-width='{}px' width='{}' height='{}' y='{}' x='{}' ry='{}' rx='{}' />\n"
         templates["text"] = "    <text x='{}' y = '{}' font-family='{}' stroke='{}' fill='{}' font-size='{}px'>{}</text>\n"
         templates["ellipse"] = "    <ellipse cx='{}' cy='{}' rx='{}' ry='{}' fill='{}' stroke='{}' stroke-width='{}' />\n"
+        templates["path"] = "<path fill='{}' stroke='{}' stroke-width='{}px' d='{}' />"
 
         return templates
 
@@ -74,6 +75,13 @@ class SVG(object):
         """
 
         self.__add_to_svg(self.templates["circle"].format(stroke, strokewidth, fill, r, cy, cx))
+        
+    def path(self, fill, stroke, strokewidth, d):
+
+        """
+        Adds a path using the method's arguments.
+        """
+        self.__add_to_svg(self.templates["path"].format(fill, stroke, strokewidth, d))
 
     def line(self, stroke, strokewidth, x1, y1, x2, y2):
 
