@@ -81,6 +81,12 @@ def i_want_to_believe():
     s.line("silver", 2, 234, 416, 226, 432)
     s.line("silver", 2, 278, 416, 286, 432)
     s.ellipse(256, 400, 64, 16, "silver", "silver", 4)
+    
+    d = ('M' +' ' + str(20) + ' ' + str( 150) + ',' +' ' + 'C' + ' ' + str( 210) + ' ' +str( 180) + ' ' + str( 210) +
+         ' ' + str(190) +',' + ' ' + str( 290) + ' ' + str(490))
+    
+    s.path("white", "white",  2, d )
+
 
     s.finalize()
 
