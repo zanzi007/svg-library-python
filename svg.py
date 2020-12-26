@@ -31,7 +31,7 @@ class SVG(object):
 
         """
         Create a set of templates for each element type for use by
-        methods creating each of these types.
+        methods creating each of these types. Added the Bezier.
         """
 
         templates = {}
